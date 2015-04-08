@@ -41,6 +41,14 @@ NSString * const downcastURLScheme = @"downcast://";
     }
 }
 
++ (BOOL)canSubscribeToFeedInPodcastApp:(PodcastApp)app
+{
+    return app == PodcastAppApple ||
+    app == PodcastAppOvercast ||
+    app == PodcastAppCastro ||
+    app == PodcastAppDowncast;
+}
+
 + (BOOL)subscribeToFeedURL:(NSURL *)URL inPodcastApp:(PodcastApp)app
 {
     NSString *URLString = nil;
@@ -115,19 +123,19 @@ NSString * const downcastURLScheme = @"downcast://";
             appURLScheme = appleURLScheme;
             break;
         }
-            
+
         case PodcastAppOvercast:
         {
             appURLScheme = overcastURLScheme;
             break;
         }
-            
+
         case PodcastAppCastro:
         {
             appURLScheme = castroURLScheme;
             break;
         }
-            
+
         case PodcastAppInstacast:
         {
             appURLScheme = instacastURLScheme;

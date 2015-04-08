@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, PodcastApp) {
  *
  *  @param app Which app to check install state for.
  *
- *  @return true if the app is installed
+ *  @return true if the app is installed.
  */
 + (BOOL)canOpenPodcastApp:(PodcastApp)app;
 
@@ -44,8 +44,17 @@ typedef NS_ENUM(NSUInteger, PodcastApp) {
 + (void)openPodcastApp:(PodcastApp)app;
 
 /**
- *  Opens the subscribe mechanism in a supported podcast app.
- *  Currently supported apps: Apple, Overcast, Castro, Downcast.
+ *  Determine whether a podcast app supports subscribing through URL scheme.
+ *
+ *  @param app Which app to check subscribe state for.
+ *
+ *  @return true if the app supports subscribing to podcast feeds.
+ */
++ (BOOL)canSubscribeToFeedInPodcastApp:(PodcastApp)app;
+
+/**
+ *  Opens the subscribe mechanism in a supported podcast app. 
+ *  It's recommended to call +canSubscribeToFeedInPodcastApp: before calling this method.
  *
  *  @param URL The feed URL to subscribe to.
  *  @param app Which app to open.
