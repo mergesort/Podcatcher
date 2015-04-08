@@ -45,6 +45,7 @@ typedef NS_ENUM(NSUInteger, PodcastApp) {
 
 /**
  *  Opens the subscribe mechanism in a supported podcast app.
+ *  Currently supported apps: Apple, Overcast, Castro, Downcast.
  *
  *  @param URL The feed URL to subscribe to.
  *  @param app Which app to open.
