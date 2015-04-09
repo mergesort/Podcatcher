@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = 'Podcatcher'
   spec.version      = '1.0.0'
-  spec.license      = { :type => 'Apache 2.0', :file => 'LICENSE' }
+  spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage     = 'https://github.com/mergesort/Podcatcher'
   spec.author       =  { 'Joe Fabisevich' => 'github@fabisevi.ch' }
   spec.summary      = 'A library for interacting with iOS Podcast apps.'
