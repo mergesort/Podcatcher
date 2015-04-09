@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.author       =  { 'Joe Fabisevich' => 'github@fabisevi.ch' }
   spec.summary      = 'A library for interacting with iOS Podcast apps.'
   spec.source       =  { :git => 'https://github.com/mergesort/Podcatcher.git', :tag => "#{spec.version}" }
-  spec.source_files = '*.{h,m}'
+  spec.source_files = 'src/*.{h,m}'
   spec.framework    = 'Foundation'
   spec.requires_arc = true
   spec.social_media_url = 'https://twitter.com/mergesort'
